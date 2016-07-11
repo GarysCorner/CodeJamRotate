@@ -3,7 +3,9 @@
 //Date:		2016-07-11
 //Desc:		Designed to solve google Code Jam Rotate from 2010 Round 1A
 //Problem:	https://code.google.com/codejam/contest/544101/dashboard#s=p0
-//Results:	
+//Results:	A-small-practice.in: 75ms       A-large-practice.out: 166ms
+//Comments:     The logic in this class could probably be improved so that if there are less rows or columns left to test than would been needed to get to k the iteration breaks.  But the solutions comes fast enough to were the extra headache isn't justfied.
+
 package codejamrotate;
 
 
@@ -47,20 +49,22 @@ public class TestCase {
         
         //check for accross solution
         //iter rows
-        
         for(int r=0; r<this.matrixsize; r++) {
             //iter columns
+            this.rinline = 0;
+            this.binline = 0;
             for(int c=0; c<this.matrixsize; c++) {
                 this.randblinelogic(r, c);
             }
-            this.rinline = 0;
-            this.binline = 0;
+            
         }
         
         //check if 4 in a row in column
         //iter over column
         for(int c=0; c<this.matrixsize; c++) {
             //iter over rows
+            this.rinline = 0;
+            this.binline = 0;
             for(int r=0; r<this.matrixsize; r++) {
                 this.randblinelogic(r, c);
             }
@@ -71,29 +75,31 @@ public class TestCase {
         for(int r=0; r<this.matrixsize; r++) {
             //iter over columns
             for(int c=0; c<this.matrixsize; c++) {
+                rinline = 0;  //reset r and b
+                binline = 0;
+
                 //move
                 for(int offset = 0; offset + c < this.matrixsize && offset + r < this.matrixsize; offset++ ) {
                     this.randblinelogic(r+offset, c+offset);//check the logic
                 }
-                rinline = 0;  //reset r and b
-                binline = 0;
+                
             }
         }
         
         //solve diagnoal top right to bottom left
-        //iter over rows
-        
+        //iter over rows        
         for(int r=0; r<this.matrixsize; r++) {
             //iter over columns
             for(int c=0; c<this.matrixsize; c++) {
-                //move
                 
+                rinline=0;  //reset r and b line counts
+                binline=0;
+                
+                //move
                 for(int offset = 0; c-offset >= 0 && offset + r < this.matrixsize; offset++  ) {
                     this.randblinelogic(r+offset, c-offset);
                 }
                 
-                rinline=0;  //reset r and b line counts
-                binline=0;
             }
             
         }

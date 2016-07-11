@@ -3,7 +3,7 @@
 //Date:		2016-07-11
 //Desc:		Designed to solve google Code Jam Rotate from 2010 Round 1A
 //Problem:	https://code.google.com/codejam/contest/544101/dashboard#s=p0
-//Results:	A-small-practice.in: 69ms       A-large-practice.out: 163ms
+//Results:	A-small-practice.in: 75ms       A-large-practice.out: 166ms
 
 package codejamrotate;
 
