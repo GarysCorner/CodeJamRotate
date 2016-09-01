@@ -75,7 +75,7 @@ public class CodeJamRotate {
     //load data from file into data structure
     private void loadData() {
         
-        long loaddatastarttime = System.currentTimeMillis();  //the time we started loading data
+        long loaddatastarttime = System.currentTimeMillis();  //the time started loading data
         
         System.err.printf("\nLoading data from \"%1$s\"...\n", this.infileopt);
         
@@ -147,7 +147,7 @@ public class CodeJamRotate {
         }
         
         if(outfileopt == null) {
-            outfileopt = "Stdout";
+            outfileopt = "StdOut";
             outfile = System.out;
         } else {
             try {
@@ -195,7 +195,7 @@ public class CodeJamRotate {
         
 		
         if(  2 < args.length || args.length == 0 ) {
-                System.err.println("Program requires 1 or 2 arguments.  First arg is infile name, 2nd arg is outfile name StdOut by default.");
+                System.err.println("Program requires 1 or 2 arguments.  The first argument is the infile name, the second argument is outfile name.  StdOut by default.");
                 System.exit(1);  //exit the system if arguments not correct
         }
 

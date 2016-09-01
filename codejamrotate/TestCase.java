@@ -24,7 +24,7 @@ public class TestCase {
     boolean rhask = false;
     boolean bhask = false;
 
-    //how many have we currently found when one of these hits k we have a winner
+    //how many have currently been found when one of these hits k we have a winner
     int rinline = 0;  
     int binline = 0;
     
@@ -70,7 +70,7 @@ public class TestCase {
             }
         }
         
-        //solve diagnoal top left to bottom right
+        //solve diagonal top left to bottom right
         //iter over rows
         for(int r=0; r<this.matrixsize; r++) {
             //iter over columns
@@ -86,7 +86,7 @@ public class TestCase {
             }
         }
         
-        //solve diagnoal top right to bottom left
+        //solve diagonal top right to bottom left
         //iter over rows        
         for(int r=0; r<this.matrixsize; r++) {
             //iter over columns
@@ -151,7 +151,7 @@ public class TestCase {
     public void rotate() {
         char[][] newmatrix = new char[this.matrixsize][this.matrixsize];
         
-        //this code rotates then we will use gravity
+        //this code rotates then it will use gravity
         //iter over rows
         for(int r=0; r<this.matrixsize; r++) {
             
@@ -168,7 +168,7 @@ public class TestCase {
         
         //iter throw rows backwards ignore row 1 because it is own bottom
         for(int r=this.matrixsize-2; r>=0; r--) {
-            //iter through colums order shouldn't matter
+            //iter through columns order shouldn't matter
             for(int c=0; c<this.matrixsize; c++) {
                 
                 if(this.matrix[r][c] == '.') {
